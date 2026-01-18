@@ -34,7 +34,7 @@ public class PlayerController {
             return playerService.getPlayersByName(name);
         } else if (team != null) {
             return playerService.getPlayersByTeam(team);
-        } else if(position != null) {
+        } else if(position != null){
             return playerService.getPlayersByPosition(position);
         } else if(age != null){
             return playerService.getPlayersAge(age);
