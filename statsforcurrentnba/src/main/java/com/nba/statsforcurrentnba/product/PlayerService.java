@@ -37,6 +37,11 @@ public List<Player> getPlayersByPosition(String searchText){
             .collect(Collectors.toList());
 }
 
+public List<Player> getPlayersAge(String age){
+    return playerRepository.findAll().stream()
+            .filter(player -> age.equals(player.getAge()))
+            .collect(Collectors.toList());
+}
 
 public Player updatePlayers(Player updatedPlayer){
     return playerRepository.save(updatedPlayer);
